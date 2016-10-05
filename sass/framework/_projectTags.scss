@@ -1,0 +1,71 @@
+﻿@import "variables";
+
+/*$project-tag-bg-color: grayscale($blip2-color);
+$project-tag-bg-color-hover: grayscale(darken($blip2-color, 10%));
+$project-tag-color: #fff;*/
+$project-tag-bg-color: #fff;
+$project-tag-bg-color-hover: #ccc;
+$project-tag-color: #111;
+
+ul.project-tags {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+
+    > li, a {
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        position: relative;
+        font-size: .9em;
+        margin-bottom: .5em;
+    }
+
+    a {
+        margin-left: 1em;
+        padding: 0 1em 0 1.1em;
+        //background: $project-tag-bg-color;
+        //color: $project-tag-color;
+        text-decoration: none;
+        border-radius: 2px 4px 4px 2px;
+
+
+        &:before {
+            content: "";
+            float: left;
+            position: absolute;
+            top: 0;
+            left: -9px;
+            width: 0;
+            height: 0;
+            //border-color: transparent $project-tag-bg-color transparent transparent;
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 2px;
+            float: left;
+            width: 4px;
+            height: 4px;
+            border-radius: 2px;
+            background: #fff; // this is the white icon
+            box-shadow: -1px -1px 2px #004977;
+        }
+
+        /*&:hover {
+            background: $project-tag-bg-color-hover;
+
+            &:before {
+                border-color: transparent $project-tag-bg-color-hover transparent transparent;
+            }
+        }*/
+
+    }
+
+    @include colorTag($project-tag-bg-color, $project-tag-bg-color-hover, $project-tag-color, $project-tag-color);
+}

@@ -1,0 +1,16 @@
+﻿<section class="project-overview">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4  col-md-3 project-image-wrapper">
+                <img class="project-image" alt="picture of the project" [src]="imageURL">
+            </div>
+            <div class="col-sm-8 col-md-9">
+                <h2 class="project-title">{{title}}</h2>
+                <p class="project-description">{{blurb}}</p>
+                <ul class="project-tags">
+                    <li *ngFor="let lbl of labels"><a href="javascript:void(0);">{{lbl}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

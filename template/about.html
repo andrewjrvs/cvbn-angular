@@ -1,0 +1,61 @@
+﻿<main class="content popup-body">
+    <section class="container body-content pg-about">
+        <h1>About</h1>
+        <blockquote>
+            <p>
+                Nothing in the world can take the place of persistence.<br>
+                Talent will not; nothing is more common than unsuccessful men with talent.<br>
+                Genius will not; unrewarded genius is almost a proverb. <br>
+                Education will not; the world is full of educated derelicts.<br>
+                Persistence and determination are omnipotent. The slogan 'press on' has solved and always will
+                solve the problems of the human race.
+            </p>
+            <footer> - <cite>Calvin Coolidge</cite></footer>
+        </blockquote>
+        <section>
+            <h2 class="about-section-title">Hello</h2>
+            <p>
+                We live in amazing times, but with each new technology evolution, our jobs may become more complex.
+                Technology is important, but it must be made functional and useful to provide users with a product
+                that is not only present, but also beneficial and productive.  My passion is merging technology and
+                usefulness.
+            </p><p>
+                My job experience is broad, allowing me to consider functionality from both implementer and user
+                perspectives.  While working in data entry, I wrote a script to automatically enter basic data,
+                allowing the department to streamline efforts and focus on items needing more specific attention.
+                When in a call center I was instrumental in moving the department off of our old scripts and onto
+                PowerShell.  In addition, I simplified call logging by integrating it into our employee look-up
+                script, which in turn saved time after each call.
+            </p><p>
+                Since working as a programmer, I have continued to bring technology to users to increase efficiency
+                and simplify their tasks in large and small ways.  These include creating the option to copy/paste
+                in some forms to save employees from having to re-type information, including type-ahead on some
+                fields and when appropriate allowing the option for information look-up.  Whatever the job, I want
+                to help make technology an even greater asset to the user.
+            </p>
+        </section>
+        <section>
+            <h2 class="about-section-title">Facts About Me</h2>
+            <ul>
+                <li>Knows more programming languages then spoken languages.</li>
+                <li>Believes how a product functions is just as important as how it's written.</li>
+                <li>Familiarity with Object Oriented Programming, and Functional Programming.</li>
+                <li><i class="fa fa-heart blip3-color-text" aria-label="love"></i>'s JavaScript.</li>
+                <li>Eager to learn and use Node.js.</li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h2 class="about-section-title">Skill Set <sup>*</sup></h2>
+            <skill-bar *ngFor="let skill of skills;let i = index"
+                        [class.progress-bar-blip1]="i % 3 == 1"
+                        [class.progress-bar-blip3]="i % 3 == 2"
+                        [value]="skill.ability">
+                {{skill.label}}
+                <small *ngIf="skill.sub">({{skill.sub}})</small>
+            </skill-bar>
+            <hr class="solid">
+            <small>* numbers based arbitrarily on awesome.</small>
+        </section>
+    </section>
+</main>

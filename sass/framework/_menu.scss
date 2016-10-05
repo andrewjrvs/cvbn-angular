@@ -1,0 +1,97 @@
+﻿@import "variables";
+
+nav.menu {
+    // styled in menu_preload
+    background-color: $menu-bg-color;
+    border-top-color: $menu-color;
+    border-bottom-color: $menu-bg-color;
+    border-left-color: $menu-color;
+    box-shadow: 0 -1px 10px 2px #ddd;
+    padding: 0;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    /*-moz-backface-visibility: hidden;
+    backface-visibility: hidden;*/
+    background: linear-gradient(180deg, lighten($menu-bg-color, 20%) 10%, $menu-bg-color 90%);
+    z-index: $zindex-menu-base;
+    //this is needed for old mobile devices
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+    @media #{$menu-mediaQuery} {
+        box-shadow: -1px 0 10px 2px #ddd;
+        background: linear-gradient(90deg, lighten($menu-bg-color, 20%) 10%, $menu-bg-color 90%);
+    }
+
+    > ul {
+        // styled in menu_preload
+        > li {
+            // styled in menu_preload
+            &:hover {
+                background-color: darken($menu-bg-color, 10%);
+                background: linear-gradient(180deg, darken($menu-bg-color, 10%) 10%, $menu-bg-color 90%);
+
+                @media #{$menu-mediaQuery} {
+                    background: linear-gradient(90deg, darken($menu-bg-color, 10%) 10%, $menu-bg-color 90%);
+                }
+            }
+            // styled in menu_preload
+            > a {
+                // styled in menu_preload
+                position: relative;
+
+                &:after {
+                    content: attr(aria-label);
+                    color: #555;
+                    position: absolute;
+                    bottom: .5em;
+                    left: 0;
+                    right: 0;
+                    font-size: .3em;
+                    text-align: center;
+                    text-decoration: none;
+
+                    @media #{$menu-mediaQuery} {
+                        @media only screen and (orientation: landscape) and (max-height: 300px) {
+                            font-size: 8px;
+                            bottom: .1em;
+                        }
+                    }
+                }
+
+
+
+                &:hover {
+                    color: darken($menu-color, 10%);
+                }
+            }
+
+            &.scrollLink {
+                @media only screen and (min-width: $menu-toggle) {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                &.display {
+                    @media #{$menu-mediaQuery} {
+                        display: block;
+                    }
+                }
+            }
+
+
+            i.fa {
+            }
+            // i.fa
+        }
+        //end > li
+    }
+    //end > ul
+}
+//end nav.menu

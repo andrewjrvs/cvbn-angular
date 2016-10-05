@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+    <g stroke="null">
+        <title>Logo</title>
+        <ellipse fill="#35d440" stroke-width="0" cx="22" cy="10" rx="4" ry="4" stroke="#35d440" id="blip1"></ellipse>
+        <ellipse fill="#1086ff" stroke-width="0" cx="22" cy="22" rx="4" ry="4" stroke="#1086ff" id="blip2"></ellipse>
+        <ellipse fill="#e72944" stroke-width="0" cx="10" cy="34" rx="4" ry="4" stroke="#e72944" id="blip3"></ellipse>
+    </g>
+</svg>

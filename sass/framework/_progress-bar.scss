@@ -1,0 +1,78 @@
+﻿@import "variables";
+
+// Bar itself
+// -------------------------
+@mixin progress-bar-variant($color) {
+    .progress-bar{
+        background-color: $color;
+    }
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+
+// Outer container
+.progress {
+    overflow: hidden;
+    height: $line-height-computed;
+    margin-bottom: $line-height-computed;
+    background-color: $progress-bg;
+    border-radius: $border-radius-base;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+// Bar of progress
+.progress-bar {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: $font-size-small;
+    line-height: $line-height-computed;
+    color: $progress-bar-color;
+    //text-align: center;
+    padding-left: 10px;
+    padding-left: 1em;
+    background-color: $blip2-color;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    @include transition(width .6s ease);
+}
+
+
+// Account for lower percentages
+.progress-bar {
+    &[aria-valuenow="1"],
+    &[aria-valuenow="2"] {
+        min-width: 30px;
+    }
+
+    &[aria-valuenow="0"] {
+        color: $gray-light;
+        min-width: 30px;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+    }
+}
+
+// Variations
+// -------------------------
+//
+skill-bar.progress-bar-blip1 {
+  @include progress-bar-variant($blip1-color);
+}
+
+skill-bar.progress-bar-blip3 {
+  @include progress-bar-variant($blip3-color);
+}
+//
+//.progress-bar-warning {
+//  @include progress-bar-variant(@progress-bar-warning-bg);
+//}
+//
+//.progress-bar-danger {
+//  @include progress-bar-variant(@progress-bar-danger-bg);
+//}

@@ -1,0 +1,138 @@
+﻿@import "variables";
+
+nav.menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 3em;
+    min-width: 70px;
+    height: 55px;
+    border-width: 2px 0 2px 0;
+    border-style: solid;
+
+    @media #{$menu-mediaQuery} {
+        border-width: 0 0 0 2px;
+        top: 0;
+        left: auto;
+        width: auto;
+        height: auto;
+
+        @media only screen and (orientation: landscape) and (max-height: 300px) {
+            min-width: 40px;
+        }
+    }
+
+    > ul {
+        width: 100%;
+        list-style-type: none;
+        display: table;
+        margin: 0;
+        padding: 0;
+        table-layout: fixed;
+
+        @media #{$menu-mediaQuery} {
+            width: auto;
+            display: block;
+        }
+
+
+        > li {
+            display: table-cell;
+            width: auto;
+            padding: 0;
+            margin: 0;
+
+            @media #{$menu-mediaQuery} {
+                display: block;
+            }
+
+            > a {
+                color: $menu-color;
+                padding: 0 .5em .5em .5em;
+                text-align: center;
+                font-size: 2em;
+                display: block;
+                text-decoration: none;
+                min-height: 40px;
+                height: auto;
+
+                @media #{$menu-mediaQuery} {
+                    padding-top: .2em;
+
+
+                    @media only screen and (orientation: landscape) and (max-height: 300px) {
+                        min-height: 20px;
+                        padding-bottom: .3em;
+                        font-size: 1.5em;
+                    }
+                }
+
+                > i.fa {
+                    font-style: normal;
+                    text-decoration: none;
+
+
+                    .initial-loading & {
+                        visibility: hidden;
+                    }
+
+
+                    .no-fontface &,
+                    .initial-loading & {
+
+                        &.fa-home {
+                            &:before {
+                                content: '\1F3E0';
+                                font-family: Arial;
+                            }
+                        }
+
+                        &.fa-male {
+                            &:before {
+                                content: '\265F';
+                                font-family: Arial;
+                            }
+                        }
+
+                        &.fa-cogs {
+                            &:before {
+                                content: '\1F3E2';
+                                font-family: Arial;
+                            }
+                        }
+
+                        &.fa-linkedin-square {
+                            &:before {
+                                content: 'In';
+                                font-family: Arial;
+                            }
+                        }
+
+                        &.fa-code {
+                            &:before {
+                                content: '</>';
+                                font-family: Arial;
+                            }
+                        }
+
+                        &.fa-arrow-up {
+                            &:before {
+                                content: '\21e7';
+                                font-family: Arial;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.scrollLink {
+                display: none;
+            }
+        }
+        //end > li
+    }
+    //end > ul
+}
+//end nav.menu

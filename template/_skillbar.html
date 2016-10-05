@@ -1,0 +1,10 @@
+﻿<div class="col-xs-9">
+    <div class="progress">
+        <div class="progress-bar {{styleClasses}}" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width]="value + '%'" >
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
+<div class="col-xs-3">
+    <span class="ctm-process-percent">{{value}}%</span>
+</div>

@@ -1,0 +1,61 @@
+﻿@import "variables";
+
+.project-overview-list {
+    > .project-overview:nth-child(4n-3) {
+        color: #fff;
+        background-color: $blip3-color;
+        @include colorTag-SetDOTColor($blip3-color);
+    }
+
+    > .project-overview:nth-child(4n-1) {
+        color: #fff;
+            background-color: $blip2-color;//lighten($blip2-color, 40%);
+        @include colorTag-SetDOTColor($blip2-color);
+    }
+
+    > .project-overview:nth-child(4n-2) {
+        //color: #fff;
+            //background-color: $blip1-color;//lighten($blip1-color, 40%);
+        @include colorTag(#888, #555, #fff, #fff);
+        @include colorTag-SetDOTColor(#fff);
+    }
+}
+
+
+.project-overview {
+    margin-top: 1em;
+    padding-top: .5em;
+    padding-bottom: 1.0em;
+
+    .project-image-wrapper {
+        text-align: center;
+        /*background-color: #eee;*/
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+        @media only screen and (min-width: $screen-sm-min) {
+            background-color: transparent;
+        }
+    }
+
+    img.project-image {
+        width: 200px;
+        border-radius: 16px;
+        box-shadow: 2px 2px 5px #000;
+
+        @media only screen and (min-width: $screen-sm-min) {
+            //max-width: 150px;
+        }
+    }
+
+    .project-title {
+        margin-top: 1.2em;
+        font-size: 1.2em;
+        font-weight: 800;
+    }
+
+    .project-description {
+        font-weight: 200;
+        font-size: .9em;
+    }
+}

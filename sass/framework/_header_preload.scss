@@ -1,0 +1,20 @@
+﻿@import "variables";
+
+body > * > header {
+    text-align: center;
+    width: 100%;
+
+    @media only screen and (min-width: $screen-sm-max) {
+        width: auto;
+        padding: 1em 1em;
+        text-align: right;
+    }
+
+    #headerLogo {
+        visibility: hidden;
+    }
+
+    img.logo {
+        max-height: 120px;
+    }
+}

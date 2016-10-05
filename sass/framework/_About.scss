@@ -1,0 +1,31 @@
+﻿@import "variables";
+
+.pg-about {
+    h2.about-section-title {
+        text-transform: uppercase;
+        border-bottom: 2px solid;
+        padding-bottom: 10px;
+        padding-bottom: .5em;
+    }
+
+    .skills {
+        .progress {
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            text-transform: uppercase;
+        }
+
+        .ctm-process-percent {
+            font-size: $font-size-small;
+            line-height: $line-height-computed;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}
+
+.no-js .pg-about .skills .progress-bar.Programming {
+    width: 94%;
+}

@@ -1,0 +1,17 @@
+﻿<main class="content popup-body">
+    <section class="container body-content pg-projects">
+        <h1>Projects</h1>
+        <blockquote>
+            <p>Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.</p>
+
+            <footer> - <cite>Linus Torvalds</cite></footer>
+        </blockquote>
+        <p>
+            While I’ve never done anything thing amazing like Linus and invent an operating system, I do love programming. It’s not often you have an opportunity to do
+            what you love, but I’ve been privileged to have that opportunity. Listed below are a few of the projects I’ve worked on over the years.
+        </p>
+    </section>
+    <div class="project-overview-list">
+        <section project-blurb *ngFor="let project of projects" [project]="project"></section>
+    </div>
+</main>

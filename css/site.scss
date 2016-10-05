@@ -1,0 +1,21 @@
+﻿@import "../sass/framework/variables";
+
+@import "../sass/framework/layout_preload";
+@import "../sass/framework/header_preload";
+@import "../sass/framework/menu_preload";
+
+@import "../sass/framework/normalize";
+@import "../sass/framework/grid";
+@import "../sass/framework/progress-bar";
+@import "../sass/framework/layout";
+@import "../sass/framework/header";
+@import "../sass/framework/menu";
+@import "../sass/framework/projectTags";
+
+@import "../sass/framework/homepage";
+@import "../sass/framework/projects";
+@import "../sass/framework/about";
+
+skill-bar{
+    display: block;
+}
