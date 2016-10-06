@@ -5,7 +5,10 @@
     "start": "npm run lite",
     "lite": "lite-server",
     "build-css": "node-sass --include-path scss css/site.scss css/site.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""  },
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build-js": "uglifyjs --output app/app.main.min.js -- app/structure.js app/personalInformation.service.js app/about/skillbar.component.js app/about/about.component.js app/projects/blurb.component.js app/projects/project.component.js app/navigation.component.js app/logo.component.js app/home/home.component.js app/app.component.js app/app.routes.js app/app.module.js app/main.js",
+    "build-framework" : "uglifyjs --output app/framework.min.js -- node_modules/core-js/client/shim.min.js node_modules/zone.js/dist/zone.js node_modules/reflect-metadata/Reflect.js node_modules/rxjs/bundles/Rx.umd.js node_modules/@angular/core/bundles/core.umd.js node_modules/@angular/common/bundles/common.umd.js node_modules/@angular/compiler/bundles/compiler.umd.js node_modules/@angular/forms/bundles/forms.umd.js node_modules/@angular/platform-browser/bundles/platform-browser.umd.js node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js node_modules/@angular/router/bundles/router.umd.js node_modules/@angular/router-deprecated/bundles/router-deprecated.umd.js"
+  },
   "license": "ISC",
   "dependencies": {
     "@angular/common": "2.0.0-rc.5",
