@@ -8,7 +8,7 @@ nav.menu {
     border-left-color: $menu-color;
     box-shadow: 0 -1px 10px 2px #ddd;
     padding: 0;
-    margin: 0;
+    margin: 0; 
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -48,7 +48,7 @@ nav.menu {
                     content: attr(aria-label);
                     color: #555;
                     position: absolute;
-                    bottom: .5em;
+                    bottom: .9em;
                     left: 0;
                     right: 0;
                     font-size: .3em;

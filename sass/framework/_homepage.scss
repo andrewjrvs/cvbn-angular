@@ -67,7 +67,7 @@ $mission-text-border: 1px solid darken($mission-text-bg-color, 20%);
         z-index: 10;
         box-sizing: content-box;
 
-        canvas#tetris{
+        canvas#dropBlock{
             position: absolute;
             top: 1rem;
             left: 50%;

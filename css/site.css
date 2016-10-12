@@ -71,8 +71,6 @@ body {
     font-family: 'Open Sans', Geneva, Verdana, sans-serif; }
   body .no-bottom-padding {
     padding-bottom: 0 !important; }
-  body .content {
-    padding-bottom: 2em; }
   body hr.solid {
     border: none;
     border-bottom: 2px solid; }
@@ -143,7 +141,7 @@ nav.menu {
           display: block; } }
       nav.menu > ul > li > a {
         color: #000;
-        padding: 0 .5em .5em .5em;
+        padding: .1em .5em .5em .5em;
         text-align: center;
         font-size: 2em;
         display: block;
@@ -919,49 +917,6 @@ skill-bar.progress-bar-blip1 .progress-bar {
 skill-bar.progress-bar-blip3 .progress-bar {
   background-color: #e72944; }
 
-cite {
-  font-style: italic; }
-
-blockquote {
-  padding: 15px 30px;
-  margin: 0 0 30px;
-  border-left: 5px solid #ccc; }
-  blockquote p:first-child {
-    margin-top: 0; }
-  blockquote p:last-child,
-  blockquote ul:last-child,
-  blockquote ol:last-child {
-    margin-bottom: 0; }
-
-body {
-  /*.wf-loading & {
-        visibility: hidden;
-    }*/
-  font-family: 'Quando', 'Times New Roman', Times, serif;
-  /*blockquote {
-        border-left: 5px solid #ccc;
-    }*/ }
-  body h1, body h2, body h3, body h4, body h5, body h6 {
-    font-family: 'Open Sans', Geneva, Verdana, sans-serif; }
-  body .no-bottom-padding {
-    padding-bottom: 0 !important; }
-  body .content {
-    padding-bottom: 2em; }
-  body hr.solid {
-    border: none;
-    border-bottom: 2px solid; }
-  body footer.footer {
-    margin-top: 2rem; }
-  @media only screen and (min-width: 991px) {
-    body header {
-      margin-bottom: -85px;
-      margin-bottom: -5.3em; }
-    body .content {
-      margin-top: 85px;
-      margin-top: 5.3em; }
-    body .content.popup-body {
-      margin-top: 0; } }
-
 body > * > header #headerLogo {
   max-width: 280px;
   max-height: 120px;
@@ -1036,7 +991,7 @@ nav.menu {
       content: attr(aria-label);
       color: #555;
       position: absolute;
-      bottom: .5em;
+      bottom: .9em;
       left: 0;
       right: 0;
       font-size: .3em;
@@ -1171,7 +1126,7 @@ ul.project-tags {
     position: relative;
     z-index: 10;
     box-sizing: content-box; }
-    .flashy-show .screen canvas#tetris {
+    .flashy-show .screen canvas#dropBlock {
       position: absolute;
       top: 1rem;
       left: 50%;
@@ -1262,23 +1217,22 @@ ul.project-tags {
     font-weight: 200;
     font-size: .9em; }
 
-.pg-about h2.about-section-title {
-  text-transform: uppercase;
-  border-bottom: 2px solid;
-  padding-bottom: 10px;
-  padding-bottom: .5em; }
-
-.pg-about .skills .progress {
-  margin-bottom: 10px; }
-
-.pg-about .skills .progress-bar {
-  text-transform: uppercase; }
-
-.pg-about .skills .ctm-process-percent {
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: bold;
-  text-align: center; }
+.pg-about {
+  padding-bottom: 2em; }
+  .pg-about h2.about-section-title {
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    padding-bottom: .5em; }
+  .pg-about .skills .progress {
+    margin-bottom: 10px; }
+  .pg-about .skills .progress-bar {
+    text-transform: uppercase; }
+  .pg-about .skills .ctm-process-percent {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center; }
 
 .no-js .pg-about .skills .progress-bar.Programming {
   width: 94%; }

@@ -130,6 +130,7 @@ app.register('HomeComponent', function (ng) {
     Class({
         constructor: function () {
             this.name = 'world';
+            this.gameRunning = false;
         }
         , ngOnInit: function () {
 
@@ -144,7 +145,12 @@ app.register('HomeComponent', function (ng) {
 
             this.update_parallaxCenter();
 
-            tetrisStart();
+        }
+        , startGame : function(e){
+            if(!this.gameRunning){
+                this.gameRunning = true;
+                blockDropStart();
+            }
         }
         , mission_document_mousemove: function(e) {
             var x = e.clientX
