@@ -46,9 +46,10 @@ app.register('dropBlockModule', function (ng) {
    
    return ng.core
     .NgModule({
-      imports: [ ],
-      declarations: [app.AppComponent],
-      bootstrap: [app.AppComponent]
+      imports: [ ng.platformBrowser.CommonModule],
+      declarations: [],
+      exports:[],
+      bootstrap: []
     }).Class({
       constructor: function() {}
     });;

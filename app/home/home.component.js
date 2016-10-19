@@ -147,10 +147,10 @@ app.register('HomeComponent', function (ng) {
 
         }
         , startGame : function(e){
-            if(!this.gameRunning){
-                this.gameRunning = true;
-                blockDropStart();
-            }
+            // if(!this.gameRunning){
+            //     this.gameRunning = true;
+            //     blockDropStart();
+            // }
         }
         , mission_document_mousemove: function(e) {
             var x = e.clientX

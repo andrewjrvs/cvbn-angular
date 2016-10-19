@@ -5,17 +5,11 @@ app.register('AppComponent', function (ng) {
         }
     };
 
-  
-
     return ng.core.
-
     Component({
         selector: 'my-app'
         , templateUrl: '/template/main.html'
-        , directives: [
-            app.NavigationComponent
-            , app.LogoComponent
-            , ng.router.ROUTER_DIRECTIVES]
+        , directives: []
     }).
     Class({
         constructor: mainConstructor

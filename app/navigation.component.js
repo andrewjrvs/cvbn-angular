@@ -4,6 +4,7 @@ app.register('NavigationComponent', function (ng) {
         selector: 'app-navigation'
         , templateUrl: 'template/_navigation.html' + '?v=' + (new Date())
         , providers: []
+        , directives: [ng.router.ROUTER_DIRECTIVES]
     })
     .Class({
         constructor: [ng.router.Router, function (router) {
