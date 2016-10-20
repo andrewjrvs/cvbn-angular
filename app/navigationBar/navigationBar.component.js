@@ -1,4 +1,4 @@
-app.register('NavigationComponent', function (ng) {
+app.register('navigationBarComponent', function (ng) {
     return ng.core
     .Component({
         selector: 'app-navigation'

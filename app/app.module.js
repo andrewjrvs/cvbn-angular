@@ -15,11 +15,10 @@ app.register('AppModule', function (ng) {
    
    return ng.core
     .NgModule({
-      imports: [ ng.platformBrowser.BrowserModule, ng.router.RouterModule, app.routing ],
+      imports: [ ng.platformBrowser.BrowserModule, ng.router.RouterModule, app.routing, app.navigationBarModule ],
       declarations: [
                       app.tmpDirective,
                       app.AppComponent, 
-                      app.NavigationComponent, 
                       app.LogoComponent,
                     ],
       bootstrap: [app.AppComponent]
