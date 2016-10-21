@@ -21,7 +21,49 @@
 
 <!-- 3. Display the application -->
 <body>
-    <my-app>Loading...</my-app>
+    <my-app>
+        <style>
+            .loading-wrapper{
+                position: fixed;
+                top: 45vh;
+                left: 35vw;
+                font-size: 5vh;
+                margin: 0 auto 0 auto;
+            }
+            .s1{
+                color: #35d440;
+            }
+            .s2{
+                animation-delay: .3s;
+                animation-duration: .5s;
+                color: #1086ff;
+            }
+            .s3{
+                animation-delay: .5s;
+                animation-duration: .5s;  
+                color: #e72944;
+                color: #e72944;
+            }
+            @keyframes bounce{
+                0% { top: -1vh; }
+                100% { top: 0vh; }
+            }
+            .s1,
+            .s2,
+            .s3{
+                position: relative;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-name: bounce;
+                animation-duration: .6s; 
+                animation-timing-function: ease-in-out;   
+            }
+            
+        </style>
+        <div class="loading-wrapper">
+            <span>Loading</span> <span class="s1">.</span><span class="s2">.</span><span class="s3">.</span>
+        </div>
+    </my-app>
 
     <script src="scripts/framework.min.js"></script>
     <!--<script src="scripts/app.block.min.js"></script>-->
