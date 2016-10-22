@@ -1,0 +1,8 @@
+[{ "label": "Programming", "sub": "C#, VB.NET, PHP", "ability": 94 },
+    { "label": "Database", "sub": "MS SQL, MySQL", "ability": 82 },
+    { "label": "JavaScript", "sub": "vanilla, jQuery", "ability": 95 },
+    { "label": "HTML", "sub": "HTML5, CSS3", "ability": 85 },
+    { "label": "WordPress", "sub": null, "ability": 75 },
+    { "label": "Angular2", "sub": "ES5", "ability": 35 },
+    { "label": "Coldfusion", "sub": null, "ability": 45 },
+    { "label": "JAVA", "sub": null, "ability": 33 }]

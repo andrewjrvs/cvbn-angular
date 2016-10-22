@@ -3,11 +3,13 @@ app.register('AboutComponent', function (ng) {
         .Component({
             templateUrl: 'template/about.html' + '?v=' + (new Date())
             , directives: [app.SkillbarComponent]
-            , providers: [PersonalInformationService]
         })
         .Class({
-            constructor: [PersonalInformationService, function (mySelf) {
-                this.skills = mySelf.getSkills();
+            constructor: [app.PersonalInformationService, function (mySelf) {
+                var vm = this;
+                vm.skills = [];
+                mySelf.getSkills().subscribe(function(n){ Object.assign(vm.skills, n)});
+
             }]
         })
     ;

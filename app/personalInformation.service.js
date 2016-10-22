@@ -1,8 +1,5 @@
-
-+function (root) {
-    "use strict";
-
-    function project(title, blurb, imageURL, labels){
+app.register('PersonalInformationService', function (ng) {
+     function project(title, blurb, imageURL, labels){
         this.imageURL = imageURL || "";
         this.title =  title || "";
         this.blurb = blurb || "";
@@ -35,26 +32,27 @@
                     , ["C#", "MVC", "Entity Framework", "Zurb Foundation"]
             )
     ];
-
-    root['PersonalInformationService'] = function () {
-        this.skills = [];
-        this.projects = [];
+    
 
 
-        this.getSkills = function () {
-            if (!this.skills.length) {
-                Array.prototype.push.apply(this.skills, skills);
+
+    return ng.core.Injectable().Class({ 
+      constructor: [ng.http.Http, function(http) {
+            var vm = this;
+            vm._ = {};
+            vm.projects = [];
+            vm._.http = http;
+
+            vm.getSkills = function () {
+                return vm._.http.get('assets/myskills.json?_v=' + (new Date).getMilliseconds()).map(function (res) { return res.json(); });
+            };
+            vm.getProjects = function () {
+                if (!vm.projects.length) {
+                    Array.prototype.push.apply(vm.projects, projects);
+                }
+                return vm.projects;
             }
-            return this.skills;
-        }
-        this.getProjects = function () {
-            if (!this.projects.length) {
-                Array.prototype.push.apply(this.projects, projects);
-            }
-            return this.projects;
-        }
-    }
-
-
-
-}(window);
+       }],
+      
+    });
+});

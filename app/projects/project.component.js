@@ -3,10 +3,10 @@ app.register('ProjectComponent', function (ng) {
         .Component({
             templateUrl: 'template/projects.html' + '?v=' + (new Date())
             , directives: [app.BlurbComponent]
-            , providers: [PersonalInformationService]
+            , providers: []
         })
         .Class({
-            constructor: [PersonalInformationService, function (mySelf) {
+            constructor: [app.PersonalInformationService, function (mySelf) {
                 this.projects = mySelf.getProjects();
             }]
         })
