@@ -1167,31 +1167,31 @@ ul.project-tags {
     border-radius: 15px;
     box-shadow: 0 12px 6px -8px black; }
 
-.project-overview-list > .project-overview:nth-child(4n-3) {
+.project-overview-list > .project-overview:nth-child(3n+1) {
   color: #fff;
   background-color: #e72944; }
-  .project-overview-list > .project-overview:nth-child(4n-3) ul.project-tags a:after {
+  .project-overview-list > .project-overview:nth-child(3n+1) ul.project-tags a:after {
     background-color: #e72944; }
 
-.project-overview-list > .project-overview:nth-child(4n-1) {
-  color: #fff;
-  background-color: #1086ff; }
-  .project-overview-list > .project-overview:nth-child(4n-1) ul.project-tags a:after {
-    background-color: #1086ff; }
-
-.project-overview-list > .project-overview:nth-child(4n-2) a {
+.project-overview-list > .project-overview:nth-child(3n+2) a {
   background: #888;
   color: #fff; }
-  .project-overview-list > .project-overview:nth-child(4n-2) a:before {
+  .project-overview-list > .project-overview:nth-child(3n+2) a:before {
     border-color: transparent #888 transparent transparent; }
-  .project-overview-list > .project-overview:nth-child(4n-2) a:hover {
+  .project-overview-list > .project-overview:nth-child(3n+2) a:hover {
     background: #555;
     color: #fff; }
-    .project-overview-list > .project-overview:nth-child(4n-2) a:hover:before {
+    .project-overview-list > .project-overview:nth-child(3n+2) a:hover:before {
       border-color: transparent #555 transparent transparent; }
 
-.project-overview-list > .project-overview:nth-child(4n-2) ul.project-tags a:after {
+.project-overview-list > .project-overview:nth-child(3n+2) ul.project-tags a:after {
   background-color: #fff; }
+
+.project-overview-list > .project-overview:nth-child(3n) {
+  color: #fff;
+  background-color: #1086ff; }
+  .project-overview-list > .project-overview:nth-child(3n) ul.project-tags a:after {
+    background-color: #1086ff; }
 
 .project-overview {
   margin-top: 1em;
@@ -1216,6 +1216,9 @@ ul.project-tags {
   .project-overview .project-description {
     font-weight: 200;
     font-size: .9em; }
+  .project-overview + .project-overview {
+    margin-top: 0;
+    padding-top: 1em; }
 
 .pg-about {
   padding-bottom: 2em; }

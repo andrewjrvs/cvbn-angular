@@ -31,6 +31,11 @@ app.register('PersonalInformationService', function (ng) {
                     , "/images/projects/vfam.preview.png"
                     , ["C#", "MVC", "Entity Framework", "Zurb Foundation"]
             )
+        , new project("Resource Rentals and Sales Website"
+                    , "...."
+                    , "/images/projects/resourceRentals.preview.png"
+                    , ["Bootstrap", "Modx Revolution", "PHP"]
+            )
     ];
     
 

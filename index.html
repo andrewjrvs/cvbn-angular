@@ -68,7 +68,10 @@
 
     <script src="scripts/framework.min.js"></script>
     <!--<script src="scripts/app.block.min.js"></script>-->
-    <script src="scripts/app.main.min.js"></script>
+    <script async src="scripts/app.main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(e){console.log('onpage' , document.readyState);});
+    </script>
 </body>
 
 </html>

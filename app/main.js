@@ -1,6 +1,11 @@
 +function(root, document, ng){
-    document.addEventListener("DOMContentLoaded", function () {
-        ng.platformBrowserDynamic
-        .platformBrowserDynamic().bootstrapModule(app.AppModule);
-    });
+    if (document.readyState === "complete" || document.readyState === "loaded" || document.readyState === "interactive") {
+         ng.platformBrowserDynamic
+            .platformBrowserDynamic().bootstrapModule(app.AppModule);
+    }else{
+        document.addEventListener("DOMContentLoaded", function () {
+            ng.platformBrowserDynamic
+            .platformBrowserDynamic().bootstrapModule(app.AppModule);
+        });
+     }
 }(window, document, window.ng);

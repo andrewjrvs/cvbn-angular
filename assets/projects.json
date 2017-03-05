@@ -12,4 +12,9 @@
     "title" : "Valley Forge Asset Managment, LLC Website",
     "description" : "Created a simple customer facing brochuire site for Valley forge Asset Manangment. Site was responsive with a database driven customer list.",
     "image" : "/images/projects/vfam.preview.png",
-    "labels" : ["C#", "MVC", "Entity Framework", "Zurb Foundation"]}]
+    "labels" : ["C#", "MVC", "Entity Framework", "Zurb Foundation"]},
+{"id" : "ResourceRentals",
+    "title" : "Resource Rentals Website",
+    "description" : ".......",
+    "image" : "/images/projects/resourceRentals.preview.png",
+    "labels" : ["Bootstrap", "Modx Revolution", "PHP"]}]

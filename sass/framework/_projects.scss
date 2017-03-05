@@ -1,24 +1,26 @@
 ﻿@import "variables";
 
 .project-overview-list {
-    > .project-overview:nth-child(4n-3) {
+    > .project-overview:nth-child(3n+1) {
         color: #fff;
         background-color: $blip3-color;
         @include colorTag-SetDOTColor($blip3-color);
     }
 
-    > .project-overview:nth-child(4n-1) {
-        color: #fff;
-            background-color: $blip2-color;//lighten($blip2-color, 40%);
-        @include colorTag-SetDOTColor($blip2-color);
-    }
-
-    > .project-overview:nth-child(4n-2) {
+    > .project-overview:nth-child(3n+2) {
         //color: #fff;
             //background-color: $blip1-color;//lighten($blip1-color, 40%);
         @include colorTag(#888, #555, #fff, #fff);
         @include colorTag-SetDOTColor(#fff);
     }
+
+    > .project-overview:nth-child(3n) {
+        color: #fff;
+        background-color: $blip2-color;//lighten($blip2-color, 40%);
+        @include colorTag-SetDOTColor($blip2-color);
+    }
+
+
 }
 
 
@@ -57,5 +59,10 @@
     .project-description {
         font-weight: 200;
         font-size: .9em;
+    }
+     
+    + .project-overview{
+        margin-top: 0;
+        padding-top: 1em;
     }
 }
